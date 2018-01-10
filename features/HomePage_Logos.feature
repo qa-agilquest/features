@@ -20,4 +20,11 @@ Scenario: Use Digital Sign to Delete a Reservation
     And the the User uses a digital sign
   When the user clicks reserve delete
   Then The reservation should be deleted
+  
+Scenario: Use Digital Sign to Move a Reservation
+  Given A User wants to move a reservation
+    And the User is Registered
+    And the the User uses a digital sign
+  When  the user clicks move
+  Then the reservation should be moved
  

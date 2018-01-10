@@ -1,9 +1,16 @@
+Feature: Digital Signage - Windows Native Application
 
-Feature: HomePage Logos
-  In order to make sure that when customers know that they are on the right home page,
-  we need to make sure our logo is visible
-
-  Scenario: A user navigates to the Home Page
-    Given the Home Page is https://www.agilquest.com
-    When the Home Page generates
-    Then I expect to see our company's logo
+Scenario: Use Digital Sign to Create a Reservation
+  Given A User wants to create a reservation
+    And the User is Registered
+    And the User uses a digital sign
+  When the user clicks reserve
+  Then The reservation should be made
+  
+Scenario: Use Digital Sign to Edit a Reservation
+  Given A User wants to edit a reservation
+    And the User is Registered
+    And the User uses a digital sign
+  When the user clicks edit
+  Then a new screen should show that allows the user to edit the reservation
+  

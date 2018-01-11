@@ -6,7 +6,7 @@ Feature: Select Forum and Switch Between Forums
     Given the User is Registered
         And the User is Registered with Multiple Forums
     When the User logs into their account
-    Then the a User Forum Selection Popup should show
+    Then the User <Forum Selection Popup> should show
     And the forums should be displayed in a dropdown <list>
       |The User is associated with the following Forums:|
       | agilquest       | 
@@ -25,7 +25,7 @@ Feature: Select Forum and Switch Between Forums
       Given the User is Registered
         And the User is Registered with Multiple Forums
       When the User selects a forum
-      Then the profile dropdown for the User should have the following <options>
+      Then the profile dropdown for the User should <switch options>
         |Sytira Saunders|
         | My Profile    |
         | My Reservations & Requests    |
@@ -33,5 +33,7 @@ Feature: Select Forum and Switch Between Forums
         | Logout        |
     
     Scenario: Switch Forum from Profile Dropdown
-      Given the profi
+      Given the the profile dropdown for the User has <switch options>
+      When the User clicks <Switch Forum>
+      Then 
     

@@ -25,7 +25,6 @@ Feature:Floor Plan Location
         |Details|
         |Hours of Operation|
         |Policies|
-        |747 6110|
         |Price|
         |Floor Plan|
         |Asset Groups|

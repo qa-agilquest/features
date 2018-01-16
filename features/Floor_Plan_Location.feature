@@ -12,6 +12,7 @@ Feature:Floor Plan Location
         And the User needs to identify the color
         And the User needs to identify the transparency
 
+@UIAdditions
   Scenario: Altering Floor Plan Settings of a Exaustible Asset
     Given a User wants to change Floor Plan Settings
         And the Resourse is Exaustible
@@ -77,4 +78,24 @@ Feature:Floor Plan Location
         |You can change the shape, size and transparency of the shape by using the tool bar at the top of the Floor Plan or by right clicking on the shape, itself.|   
         | You can also remove the shape entirely, by clicking on the 'Remove' button.|
     
-    
+    Scenario: Manage Floor Plan Window
+      Given the User Lands on the Floor Plan sub-tab
+        And the user accesses this page through the Manage Asset Details Page
+      When the Floor Plan is selected
+      Then the Floor Level and the Floor Name should be displayed in the 'Floor Plan' text box, by default
+        And the name of the exhaustible Asset that is being managed should be displayed in the Asset Table
+        And a check mark should be displayed in the Select column of the Asset Table, next to the Asset Name
+        And the Floor Plan that has been saved with the Floor Level: Node with which the Asset is associated should be displayed in the Floor Plan Window
+        And the Floor Plan should be displayed so that the entire Floor Plan is displayed in the Floor Plan Window (i.e. Zoom to Page zoom level)
+        And the Name of the Floor Plan should be displayed as a label, above the Floor Plan Window
+        And the following Floor Plan Tool Bar elements should be enabled:
+            |Zoom In|
+            |Zoom Out|
+            |Zoom to Page|
+            |Hand icon|
+        And the following Floor Plan Tool Bar elements should be disabled:
+        |Shapes|
+        |Transparency|
+        And the following button should be disabled:
+        |SAVE|
+        
